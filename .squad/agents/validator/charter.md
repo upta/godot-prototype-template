@@ -16,12 +16,14 @@
 
 ## How I Work
 - Write scenarios that verify observable player-facing behavior, not implementation details
+- **Every gameplay code change requires validation scenarios.** If Builder ships code without scenarios, flag it. Humans should never find bugs that validation should have caught.
 - Use the `author-validation-scenario` skill to create new scenarios
 - Use the `debug-validation-failure` skill to diagnose failures from `summary.json`, `event_log.json`, screenshots, and scene trees
 - Run scenarios via `./tools/run_scenario.ps1 -Scenario <path> -GodotExe <path>`
 - Run full suites via `./tools/run_all_scenarios.ps1`
 - Keep harnesses deterministic: fixed seed, locked framerate, muted audio (handled by the runtime)
 - Expose game state through harness controllers using `get_observed_state()` returning `nodes`, `metrics`, and `signals`
+- `git push origin` at the end of every work batch
 
 ## Scenario Contract Reference
 Scenarios are JSON files with these key step operations:
