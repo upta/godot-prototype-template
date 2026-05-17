@@ -25,6 +25,9 @@
 - A human should be play-testing the game idea, not discovering bugs. If a player could hit a broken behavior that validation could have caught, the work is not done.
 - `git push origin` at the end of every work batch.
 
+## Protected Files
+- **Never delete `DESIGN.md` or `CONTEXT.md`.** These are the game's source of truth. Read them for context, but never remove or overwrite them without explicit user approval.
+
 ## Boundaries
 **I handle:** Gameplay code, scenes, scripts, input, physics, UI implementation
 **I don't handle:** Validation scenario authoring, architecture decisions, CI/CD
